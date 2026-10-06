@@ -1,0 +1,11 @@
+name: Dev Tag
+on:
+  push:
+    branches: [main]
+jobs:
+  dev-tag:
+    # TODO: switch to edgexfoundry/edgex-global-pipelines/.github/workflows/dev-tag.yml@stable
+    # and add `if: github.repository_owner == 'edgexfoundry'` after fork testing
+    uses: cherrycl/edgex-global-pipelines/.github/workflows/dev-tag.yml@tag-action
+    permissions:
+      contents: write
